@@ -22,26 +22,29 @@ public class AppSecurityConfig extends 	WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailService;
 	
-	@Bean
-	public AuthenticationProvider authProvider(){
-		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-		provider.setUserDetailsService(userDetailsService());
-		provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
-		return provider;
-	}
 	
-	@Override
-	public UserDetailsService userDetailsService() {
+	  @Bean 
+	  public AuthenticationProvider authProvider(){ DaoAuthenticationProvider
+	  provider = new DaoAuthenticationProvider();
+	  provider.setUserDetailsService(userDetailService);
+	  provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance()); return
+	  provider; }
+	 
 	
-		//A user is an array of UserDetail parameters: A Name, Password, and a Role
-		List<UserDetails> users = new ArrayList<>();
-		
-		//add in the user configurations (builder pattern) with the UserDetailService
-		//the User class will help with this. Open its declaration for more.
-		users.add(User.withDefaultPasswordEncoder().username("David").password("a").roles("USER").build());
-		
-		return new InMemoryUserDetailsManager(users);
-		
-		//TODO @Test: What if any of these attributes are empty?
-	}
+/*	  @Override public UserDetailsService userDetailsService() {
+	  
+	  //A user is an array of UserDetail parameters: A Name, Password, and a Role
+	  List<UserDetails> users = new ArrayList<>();
+	  
+	  //add in the user configurations (builder pattern) with the UserDetailService
+	  //the User class will help with this. Open its declaration for more.
+	  users.add(User.withDefaultPasswordEncoder().username("David").password("a").
+	  roles("USER").build());
+	  
+	  return new InMemoryUserDetailsManager(users);
+	  
+	  //TODO @Test: What if any of these attributes are empty?
+	   * }
+*/	  
+	 
 }
