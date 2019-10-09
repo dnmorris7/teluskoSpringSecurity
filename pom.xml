@@ -50,9 +50,49 @@
 		</dependency>
 
 		
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.webdriver/webdriver-ie -->
+		<dependency>
+			<groupId>org.seleniumhq.webdriver</groupId>
+			<artifactId>webdriver-ie</artifactId>
+			<version>0.9.7376</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.webdriver/webdriver-firefox -->
+		<dependency>
+			<groupId>org.seleniumhq.webdriver</groupId>
+			<artifactId>webdriver-firefox</artifactId>
+			<version>0.9.7376</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>3.141.59</version>
+		</dependency>
 		
-		
-		
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
 	</dependencies>
 
 	<build>
